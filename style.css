@@ -276,7 +276,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 
 /* RENT */
 
-.sale,
+.sale, 
 .rent {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -289,12 +289,12 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 /* Texto */
 
 .sale-textos{
-    padding:0 110px 0 77px;
-    text-align: right;
+    padding:0 77px 0 100px;
+    /* text-align: right; */
 }
 
 .rent-textos {
-    padding: 0 110px 0 77px;
+    padding: 0 100px 0 77px;
 }
 
 .world {
@@ -474,6 +474,31 @@ font-weight: lighter;
 } */
 
 
+
+/* DEVELOPMENTS */
+
+.develop-textos {
+   justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+   
+}
+
+.develop-imgs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #DF991B;
+    margin: 50px 77px;
+    gap: 10px;
+}
+
+.d-imgs {
+   background-color: antiquewhite;
+    height: 300px;
+    width: 300px;
+    gap: 10px;
+
+}
 
 
 /* FOOTER */
