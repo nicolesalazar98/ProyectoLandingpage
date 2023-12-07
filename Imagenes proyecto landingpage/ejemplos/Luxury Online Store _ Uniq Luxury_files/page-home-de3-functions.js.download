@@ -1,0 +1,272 @@
+
+
+$(document).ready(function() {
+    var sBrowser, sUsrAg = navigator.userAgent;
+
+    if(sUsrAg.indexOf("Chrome") > -1) {
+        sBrowser = "Google Chrome";
+    } else if (sUsrAg.indexOf("Safari") > -1) {
+        sBrowser = "Apple Safari";
+    } else if (sUsrAg.indexOf("Opera") > -1) {
+        sBrowser = "Opera";
+    } else if (sUsrAg.indexOf("Firefox") > -1) {
+        sBrowser = "Mozilla Firefox";
+    } else if (sUsrAg.indexOf("MSIE") > -1) {
+        sBrowser = "Microsoft Internet Explorer";
+    }
+
+    if (sBrowser === "Apple Safari"){
+
+        document.querySelector('#social-media').style.visibility = 'hidden';
+        document.querySelector('#social-media').style.opacity = '0';
+        document.querySelector('#social-media').style.display = 'none'
+        /*document.querySelector('#gall-art-content').style.height = 'auto'*/
+
+        $('#lang-selector-req-cust select').css('appearance', 'none');
+        $('#lang-selector-req-cust select').css('border-radius', '0');
+        $('#lang-selector-req-cust select').css('background', 'url(https://uniqluxury.com.mx/wp-content/uploads/2023/03/langArrowSelect.svg) no-repeat 98% 50%');
+        $('#lang-selector-req-cust select').css('padding', '0 9px 0 0');
+        $('#lang-selector-req-cust select').css('background-size', '10px');
+    }
+
+});
+
+
+function hamMenuDisp(){
+    document.querySelector('#ham-menu-unq-xp').style.display = 'grid';
+}
+function hamMenuClose(){
+    document.querySelector('#ham-menu-unq-xp').style.display = 'none';
+}
+function showModalLI(){
+    document.querySelector('#login-form-re').style.visibility = 'inherit';
+    document.querySelector('#login-form-re').style.opacity = '1';
+}
+function hideModalLI(){
+    document.querySelector('#login-form-re').style.visibility = 'hidden';
+    document.querySelector('#login-form-re').style.opacity = '0';
+}
+function showModalSU(){
+    document.querySelector('#sign-re-form').style.visibility = 'inherit';
+    document.querySelector('#sign-re-form').style.opacity = '1';
+}
+function hideModalSU(){
+    document.querySelector('#sign-re-form').style.visibility = 'hidden';
+    document.querySelector('#sign-re-form').style.opacity = '0';
+}
+
+function cruiseToSearch(e){
+    e.preventDefault();
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    localStorage.setItem("experience_current_navigation", "cruise_travel_experience");
+    if (urlParams.has('lang')){
+        window.location.href = "https://uniqluxury.com.mx/travel-experience-search/?lang=en";
+    }else {
+        window.location.href = "https://uniqluxury.com.mx/travel-experience-search/";
+    }
+}
+function villasToSearch(e){
+    e.preventDefault();
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    localStorage.setItem("experience_current_navigation", "villas_experience");
+    if (urlParams.has('lang')){
+        window.location.href = "https://uniqluxury.com.mx/travel-experience-search/?lang=en";
+    }else {
+        window.location.href = "https://uniqluxury.com.mx/travel-experience-search/";
+    }
+}
+function sportsToSearch(e){
+    e.preventDefault();
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    localStorage.setItem("experience_current_navigation", "sports_experience");
+    if (urlParams.has('lang')){
+        window.location.href = "https://uniqluxury.com.mx/travel-experience-search/?lang=en";
+    }else {
+        window.location.href = "https://uniqluxury.com.mx/travel-experience-search/";
+    }
+}
+function honeymoonToSearch(e){
+    e.preventDefault();
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    localStorage.setItem("experience_current_navigation", "honeymoon_experience");
+    if (urlParams.has('lang')){
+        window.location.href = "https://uniqluxury.com.mx/travel-experience-search/?lang=en";
+    }else {
+        window.location.href = "https://uniqluxury.com.mx/travel-experience-search/";
+    }
+}
+function yachtsToSearch(e){
+    e.preventDefault();
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    localStorage.setItem("experience_current_navigation", "yachts_experience");
+    if (urlParams.has('lang')){
+        window.location.href = "https://uniqluxury.com.mx/travel-experience-search/?lang=en";
+    }else {
+        window.location.href = "https://uniqluxury.com.mx/travel-experience-search/";
+    }
+}
+function safariToSearch(e){
+    e.preventDefault();
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    localStorage.setItem("experience_current_navigation", "safari_experience");
+    if (urlParams.has('lang')){
+        window.location.href = "https://uniqluxury.com.mx/travel-experience-search/?lang=en";
+    }else {
+        window.location.href = "https://uniqluxury.com.mx/travel-experience-search/";
+    }
+}
+
+function langGeBotSelector(){
+    var lang = document.querySelector('select[name="lang-selector-drop"]').value;
+
+    const queryString2 = window.location.search;
+    const urlParams = new URLSearchParams(queryString2);
+
+    const queryString = window.location;
+
+    let urlPrueba = new URL(queryString.toString());
+    let params = new URLSearchParams(urlPrueba.search);
+    var finalParams = params.toString();
+
+    console.log(params.toString());
+
+
+    if (lang === "ENG"){
+        if (urlParams.has('lang')){
+            console.log("ENG no hace nada")
+        }else {
+            if (params.toString() === ''){
+                finalParams = '?lang=en';
+            }else {
+                finalParams ='?lang=en&'+params.toString();
+            }
+            let urlnew = urlPrueba.origin.toString()+urlPrueba.pathname.toString()+finalParams;
+            console.log(urlnew);
+            window.location.href = urlnew;
+        }
+    }if (lang === "ESP"){
+        if (urlParams.has('lang')){
+            params.delete('lang');
+
+            if (params.toString() === ''){
+                finalParams = '';
+            }else {
+                finalParams = '?'+params.toString();
+            }
+            let urlnew = urlPrueba.origin.toString()+urlPrueba.pathname.toString()+finalParams;
+            window.location.href = urlnew;
+            console.log(urlnew);
+        }else {
+            console.log("ESP no hace nada")
+        }
+    }
+}
+
+function subJournal(){
+
+    var name = document.querySelector('input[name="name-journal"]').value;
+    var email = document.querySelector('input[name="mail-journal"]').value;
+
+    if (name !== '' && email !== '' && validar_email(email) === true){
+
+        var json_value = {
+            "fields": [
+                {
+                    "name": "email",
+                    "value": email
+                },
+                {
+                    "name": "firstname",
+                    "value": name
+                }
+            ],
+            "skipValidation": false
+        };
+
+        document.getElementById('name-journal-id').classList.remove('resaltarBordeError');
+        document.getElementById('mail-journal-id').classList.remove('resaltarBordeError');
+        document.querySelector('#send-journal-form').style.color = '#26282B';
+        document.querySelector('#send-journal-form').style.backgroundColor = '#DF991B';
+        document.querySelector('#send-journal-form').style.pointerEvents = 'none';
+        document.querySelector('#send-journal-form').style.border = '1px solid #DF991B';
+
+        $.ajax({
+            url: "https://api.hsforms.com/submissions/v3/integration/submit/21964186/8ab088c8-b7e5-4e21-a9b8-779bda6c6813",
+            type: "POST",
+            dataType: "json",
+            contentType: 'application/json',
+            headers: {
+                'Authorization': `Bearer pat-na1-72f52df1-51f2-4aa3-ac48-b812d3d4810b`
+            },
+            data: JSON.stringify(json_value)
+        }).done(function (res){
+            console.log(res);
+
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            var lang_mail = 'en';
+            if (urlParams.has('lang')) {
+                lang_mail = 'en';
+            } else {
+                lang_mail = 'es';
+            }
+            var jasonEmail = {mail: email, namn: name, lang: lang_mail};
+
+            $.ajax({
+                url : window.location.origin+"/wp-json/de3/v1/sndJnThLstEmail",
+                type : "POST",
+                dataType: "json",
+                data :jasonEmail
+            }).
+            done(function(res) {
+                console.log(res);
+            });
+
+        }).then(function () {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            if (urlParams.has('lang')) {
+                document.querySelector('#form-container-journal').innerHTML = '<span class="text-description" style="color: #DF991B; width: 100%;">Your form has been sent successfully.</span>';
+            } else {
+                document.querySelector('#form-container-journal').innerHTML = '<span class="text-description" style="color: #DF991B; width: 100%;">Su formulario ha sido enviado con éxito.</span>';
+            }
+        })
+    }else {
+        if (name === '') {
+            console.log('name');
+            document.getElementById('name-journal-id').classList.add('resaltarBordeError');
+        }
+        else{
+            console.log('name completo');
+            document.getElementById('name-journal-id').classList.remove('resaltarBordeError');
+        }
+
+        if (email === '' || validar_email(email) !== true) {
+            console.log('email');
+            document.getElementById('mail-journal-id').classList.add('resaltarBordeError');
+        }
+        else{
+            console.log('email completo');
+            document.getElementById('mail-journal-id').classList.remove('resaltarBordeError');
+        }
+
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        if (urlParams.has('lang')) {
+            alert('"Hello! It seems that some fields are incorrect or empty. Please fill them in to continue."');
+        } else {
+            alert('"¡Hola! Parece que algunos campos son incorrectos o están vacíos. Por favor, complétalos para continuar."');
+        }
+    }
+}
+function validar_email( email ){
+    var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email) ? true : false;
+}

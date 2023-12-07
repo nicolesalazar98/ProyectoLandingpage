@@ -1,0 +1,572 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    /* font-family: 'Playfair Display', serif; */
+}
+
+/* main {
+    width: 100%;
+} */
+/* No se si estoy usando creo que no */
+
+
+/* HEADER  */
+
+header nav { 
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-top: solid 0.005px rgba(255, 255, 255, 0.9);
+    border-bottom: solid 1px white;
+    align-items: center;
+    color: white;
+    background-color: #0009;
+    padding: 12px;
+} 
+
+header nav a img {
+    width: 210px;
+    margin-left: 67px;
+}
+
+#mobile {
+    height: 50px;
+    width: 50px;
+    display: none;
+}
+
+.nav-links {
+display: flex;
+gap: 64px;
+margin-right: 30px;
+cursor: pointer;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.login, .menu {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.active {
+    color: #7E7E7E;
+}
+
+.bar {
+    width: 1px;
+    background-color: white;
+    height: 16px;
+}
+
+.large {
+    height: 32px;
+}
+
+.menu img {
+    width: 30px;
+}
+
+
+
+/* main img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top -300px right 0;
+} */
+/* No se si esto sirve porque estoy usando la img no en main sino abajo */
+
+
+
+/* BANNER */
+
+#banner {
+    padding: 0 77px;
+    background-image: url(Imagenes\ proyecto\ landingpage/portada.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+/* Imagen principal sin opacidad */
+
+/* .overlay-gradient {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.50;
+} */
+/* opacidad? */
+
+
+/* #banner {
+    position: relative;
+    display: inline-block;
+    background-image: url(Imagenes\ proyecto\ landingpage/portada.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0 64px;
+}
+
+.overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.50;
+} */
+/* Imagen superpuesta */
+
+/* #banner {
+    padding: 0 64px;
+    height: 100vh;
+    width: 100%;
+    background-image: url(Imagenes\ proyecto\ landingpage/portada.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#banner::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+/* Para tener la imagen con opacidad */
+
+.banner-input {
+    position: relative;   
+    width: fit-content;
+    float: right;
+    margin-top: 90px;
+}
+
+.banner-input input {
+    background-color: transparent;
+    height: 100%;
+    width: 300px;
+    border: solid 1px white;
+    border-radius: 30px;
+    color: white;
+    padding: 8px 24px;
+}
+
+.banner-input input ::placeholder {
+    color: #FFFFFF;
+}
+
+.banner-input img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-24px, -50%);
+    cursor: pointer;
+    width: 15px;
+}
+
+/* .banner-input {
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    float: right;
+    margin-top: 90px;
+}
+
+.input-inicio {  
+    display: flex;
+    width: fit-content ;
+    position: relative;
+    background-color: transparent;
+    width: 1fr;
+    border-radius: 30px;
+    color: white;
+    padding: 8px 24px;
+} */
+
+/* .input-inicio ::placeholder {
+    color: #fff;
+} */
+
+/* .input-inicio img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50px, -50%);
+    cursor: pointer;
+    width: 15px;
+} */
+
+
+
+
+
+
+
+.banner-contenido {
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 360px;
+}
+
+.banner-contenido h3 {
+    font-size: 56px;
+    font-weight: 400;
+    padding: 40px 0px;
+    color: #fff;
+    font-weight: 560;
+}
+
+.banner-contenido h3 span {
+    font-weight: 500;
+    font-size: 36px;
+    font-weight: 510;
+}
+
+.banner-boton {
+    position: relative;
+    width: 270px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    padding: 15px 0px 15px 100px;
+    align-self: baseline;
+    transition: all 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: 450;
+}
+
+.banner-boton img {
+    position: absolute;
+    left: 40px;
+    width: 25px;
+}
+
+.banner-boton:hover {
+    cursor: pointer;
+    background-color: rgb(45, 45, 45);
+}
+
+
+
+/* RENT */
+
+
+.sale {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    place-items: center;
+    margin-top: 100px;
+}
+
+.rent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    place-items: center;
+    margin-top: 100px;
+}
+
+
+/* Texto */
+.sale-textos {
+    padding: 0 110px 0 77px;
+}
+
+.rent-textos {
+    padding: 0 110px 0 77px;
+}
+
+.world {
+    color: #DF991B;
+    font-size: 27px;
+}
+
+h2 {
+    font-weight: bolder;
+    font-size: 54px;
+}
+
+.parrafos {
+    font-size: 18px;
+    margin-top: 10%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* Botones */
+
+.btns {
+display: flex;
+gap: 30px;
+margin-top: 10%;
+justify-content: space-between;
+transition: 0.4s ease;
+}
+
+.btns img {
+    height: 20px;
+}
+
+.btn-prim {
+    font-weight: 450;
+    font-size: 15px;
+    border: solid 1px black;
+    border-radius: 100px;
+    background-color: transparent;
+    padding: 15px 60px;
+}
+
+.btn-prim:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: rgb(45, 45, 45);
+}
+
+.btn-sec {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    gap: 10px;
+}
+
+.btn-sec:hover {
+    cursor: pointer;
+}
+
+.prev {
+    color:#B4B7B7;
+}
+
+.next {
+    color: #DF991B;
+}
+
+
+/* Imagenes */
+
+.rent-imgs {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    overflow-x: hidden;
+    /* height: 400px;
+    overflow-y: hidden; */
+    gap: 10px;
+}
+
+.imgs {
+    grid-column: span 5;
+    overflow: hidden;
+    position: relative;
+}
+
+.imgs img {
+    width: 1fr;
+    height: 400px;
+    object-fit: cover;
+}
+
+.inactive {
+    grid-column: span 2;
+}
+
+.imgs p {
+    font-size: 27px;
+    font-weight: bold;
+    position: absolute;
+    color: #FFFFFF;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    transition: 0.4s ease;
+}
+
+.imgs p span {
+font-size: 20px;
+font-weight: lighter;
+}
+
+.imgs:hover {
+    cursor: pointer;
+}
+
+.imgs:hover p {
+    background-color: #FFFFFF;
+    color: black;
+}
+
+
+
+
+
+/* FOOTER */
+/* 
+footer {
+    background-color: black;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+
+
+
+
+.news {
+    background-color: #26282B;
+    display: flex;
+    justify-self: center;
+    gap: 16px;
+    padding: 16px 50px;
+    transform: translate(0,-50%);
+}
+
+.news span {
+    color: orange;
+    font-size: 20px;
+}
+
+.news p {
+    color: white;
+    font-size: 32px;
+}
+
+.footer-form {
+    display: grid;
+    gap: 8px;
+}
+
+.footer-form input {
+    background-color: transparent;
+    border: solid 2px grey;
+    border-radius: 30px;
+    padding: 6px 16px;
+    width: 100%;
+}
+
+.footer-form button {
+    background-color: transparent;
+    border: solid 2px orange;
+    border-radius: 30px;
+    padding: 6px 32px;
+    width: fit-content;
+    color: orange;
+    justify-self: end;
+    cursor: pointer;
+}
+
+
+
+
+.info {
+    display: grid;
+    gap: 16x;
+    color: white;
+}
+
+
+
+.footer-text {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    font-size: 18px;
+    gap: 15px;
+    margin-bottom: 15px;
+    }
+
+.footer-text img {
+    width: 150px;
+}
+
+.contact{
+    font-family: 'Times New Roman', Times, serif;
+   text-align: right;
+}
+
+.telf {
+    font-size: 24px;
+    font-style: bold;
+}
+
+.footer-bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.copyright {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+} */
+
+
+
+
+
+    /* RESPONSIVE */
+/* 
+@media screen and (max-width: 600px) {
+
+    #logo {
+        display: none;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    .login {
+        display: none;
+    }
+
+    .menu a, .menu div {
+        display: none;
+    }
+
+    main img {
+        object-position: center;
+    }
+
+
+
+} */
+   
+
+   
+   
+
+
