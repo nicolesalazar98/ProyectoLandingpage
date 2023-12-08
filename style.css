@@ -9,11 +9,6 @@ html {
     /* font-family: 'Playfair Display', serif; */
 }
 
-/* main {
-    width: 100%;
-} */
-/* No se si estoy usando creo que no */
-
 
 /* HEADER  */
 
@@ -75,60 +70,19 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 }
 
 
-
-/* main img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    object-position: top -300px right 0;
-} */
-/* No se si esto sirve porque estoy usando la img no en main sino abajo */
-
-
-
 /* BANNER */
 
-#banner {
+/* #banner {
     padding: 0 77px;
     background-image: url(Imagenes\ proyecto\ landingpage/portada.png);
     height: 100vh;
     background-size: cover;
     background-position: center;
-}
+} */
 /* Imagen principal sin opacidad */
 
-/* .overlay-gradient {
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.50;
-} */
-/* opacidad? */
-
-
-/* #banner {
-    position: relative;
-    display: inline-block;
-    background-image: url(Imagenes\ proyecto\ landingpage/portada.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    padding: 0 64px;
-}
-
-.overlay-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.50;
-} */
-/* Imagen superpuesta */
-
 #banner {
-    padding: 0 64px;
+    padding: 0 77px;
     height: 100vh;
     width: 100%;
     background-image: url(Imagenes\ proyecto\ landingpage/portada.png);
@@ -147,6 +101,8 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 }
 /* Para tener la imagen con opacidad */
 
+/* Banner input */
+
 .banner-input {
     position: relative;   
     width: fit-content;
@@ -160,11 +116,11 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     width: 300px;
     border: solid 1px white;
     border-radius: 30px;
-    color: white;
+    color: white; 
     padding: 8px 24px;
 }
 
-.banner-input input ::placeholder {
+.banner-input input::placeholder {
     color: #FFFFFF;
 }
 
@@ -177,46 +133,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     width: 15px;
 }
 
-/* .banner-input {
-    position: relative;
-    color: #fff;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    float: right;
-    margin-top: 90px;
-}
-
-.input-inicio {  
-    display: flex;
-    width: fit-content ;
-    position: relative;
-    background-color: transparent;
-    width: 1fr;
-    border-radius: 30px;
-    color: white;
-    padding: 8px 24px;
-} */
-
-/* .input-inicio ::placeholder {
-    color: #fff;
-} */
-
-/* .input-inicio img {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(-50px, -50%);
-    cursor: pointer;
-    width: 15px;
-} */
-
-
-
-
-
-
+/* Banner contenido */
 
 .banner-contenido {
     position: relative;
@@ -274,47 +191,9 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 
 
 
-/* RENT */
+/* CONTENIDO GENERAL */
 
-.sale, 
-.rent,
-.interior {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    place-items: center;
-    margin-top: 100px;
-}
-
-/* .interior {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    place-items: center;
-    margin-top: 100px;
-} */
-
-
-/* Texto */
-
-.sale-textos {
-    padding:0 77px 0 100px;
-    /* text-align: right; */
-}
-
-.rent-textos {
-    padding: 0 100px 0 77px;
-}
-
-.interior-textos {
-    padding: 0 77px 0 0;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
+/* Textos generales */
 
 .world {
     color: #DF991B;
@@ -333,7 +212,7 @@ h2 {
 }
 
 
-/* Botones */
+/* Botones generales */
 
 .btns {
 display: flex;
@@ -383,8 +262,39 @@ transition: 0.4s ease;
     color: #DF991B;
 }
 
+/* CONTENIDO ESPECIFICO */
 
-/* Imagenes */
+/* SALE RENT INTERIOR general */
+
+.sale, 
+.rent,
+.interior {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    place-items: center;
+    margin-top: 100px;
+}
+
+/* SALE RENT INTERIOR textos */
+
+.sale-textos {
+    padding:0 77px 0 100px;
+    /* text-align: right; */
+}
+
+.rent-textos {
+    padding: 0 100px 0 77px;
+}
+
+.interior-textos {
+    padding: 0 77px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* SALE RENT imagenes */
 
 .sale-imgs,
 .rent-imgs {
@@ -393,24 +303,7 @@ transition: 0.4s ease;
     overflow-x: hidden;
     gap: 10px;
 }
-
-/* .interior-img {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    
-} */
-
-.interior-img img {
-    padding: 77px;
-    height: 1000px;
-}
-
-.logo-superior {
-    width: 30px;
-    margin-bottom: 100px;
-}
-
-
+ 
 .s-imgs,
 .r-imgs {
     grid-column: span 5;
@@ -429,7 +322,27 @@ transition: 0.4s ease;
     grid-column: span 2;
 }
 
-.s-imgs p,
+
+/* INTERIOR imagenes */
+
+.interior-img img {
+    padding: 77px;
+    height: 1000px;
+}
+
+.logo-superior {
+    width: 30px;
+    margin-bottom: 100px;
+}
+
+.logo-superior img {
+    height: 90px;
+}
+
+
+/* SALE RENT DEVELOPMENTS Texto imagenes */
+
+/* .s-imgs p,
 .r-imgs p {
     font-size: 27px;
     font-weight: bold;
@@ -442,6 +355,42 @@ transition: 0.4s ease;
     padding: 15px;
     margin: 0;
     transition: 0.4s ease;
+}
+
+.d-imgs p {
+    font-size: 27px;
+    font-weight: bold;
+    position: absolute;
+    color: black;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    transition: 0.4s ease;
+    background-color: #FFFFFF;
+} */
+
+.s-imgs p,
+.r-imgs p,
+.d-imgs p {
+    font-size: 27px;
+    font-weight: bold;
+    position: absolute;
+    color: #FFFFFF;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    transition: 0.4s ease;
+}
+
+.d-imgs p {
+    color: black;
+    background-color: #FFFFFF;
 }
 
 .s-imgs p span,
@@ -464,9 +413,7 @@ font-weight: lighter;
 }
 
 
-
-
-/* DEVELOPMENTS */
+/* DEVELOPMENTS general */
 
 .develop-textos {
    justify-content: center;
@@ -492,23 +439,14 @@ font-weight: lighter;
     position: relative;
 }
 
-
 .d-imgs img {
     width: 1fr;
     height: 300px;
-   
     object-fit: cover;
 }
 
-/* .d-imgs:hover p {
-    cursor: pointer;
-    color: #FFFFFF;
-    background-color: rgb(45, 45, 45);
-    border: solid 1px black;
-} */
-
 .d-imgs:hover {
-    border: solid 1px black;
+    border: solid 0.2px rgb(90, 90, 90);
     animation: SlideTopAnimation 0.6s ease 0s 1 normal forwards;
 }
 
@@ -523,25 +461,6 @@ font-weight: lighter;
 }
 
 
-.d-imgs p {
-    font-size: 27px;
-    font-weight: bold;
-    
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px;
-    margin: 0;
-    transition: 0.4s ease;
-
-    color: black;
-    background-color: #FFFFFF;
-
-}
-
-
 
 /* FOOTER */
 
@@ -553,11 +472,7 @@ footer {
     position: relative;
 }
 
-
-
-
-
-
+/* News */
 
 .news {
     background-color: #26282B;
@@ -602,16 +517,13 @@ footer {
     cursor: pointer;
 }
 
-
-
+/* Info */
 
 .info {
     display: grid;
     gap: 16x;
     color: white;
 }
-
-
 
 .footer-text {
     display: grid;
