@@ -481,6 +481,7 @@ font-weight: lighter;
     position: relative;
     margin: 50px 77px;
     gap: 30px;
+    padding-top: 70px;
 }
 
 .d-imgs {
@@ -491,12 +492,36 @@ font-weight: lighter;
     position: relative;
 }
 
+
 .d-imgs img {
     width: 1fr;
     height: 300px;
    
     object-fit: cover;
 }
+
+/* .d-imgs:hover p {
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: rgb(45, 45, 45);
+    border: solid 1px black;
+} */
+
+.d-imgs:hover {
+    border: solid 1px black;
+    animation: SlideTopAnimation 0.6s ease 0s 1 normal forwards;
+}
+
+@keyframes SlideTopAnimation {
+	0%, 25% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-20px);
+	}
+}
+
 
 .d-imgs p {
     font-size: 27px;
