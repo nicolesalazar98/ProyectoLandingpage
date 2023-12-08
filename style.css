@@ -72,15 +72,6 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 
 /* BANNER */
 
-/* #banner {
-    padding: 0 77px;
-    background-image: url(Imagenes\ proyecto\ landingpage/portada.png);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-} */
-/* Imagen principal sin opacidad */
-
 #banner {
     padding: 0 77px;
     height: 100vh;
@@ -262,6 +253,7 @@ transition: 0.4s ease;
     color: #DF991B;
 }
 
+
 /* CONTENIDO ESPECIFICO */
 
 /* SALE RENT INTERIOR general */
@@ -292,6 +284,10 @@ transition: 0.4s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.interior-btn {
+    margin-top: 35%;
 }
 
 /* SALE RENT imagenes */
@@ -336,41 +332,12 @@ transition: 0.4s ease;
 }
 
 .logo-superior img {
-    height: 90px;
+    height: 100px;
+    margin-bottom: 35%;
 }
 
 
 /* SALE RENT DEVELOPMENTS Texto imagenes */
-
-/* .s-imgs p,
-.r-imgs p {
-    font-size: 27px;
-    font-weight: bold;
-    position: absolute;
-    color: #FFFFFF;
-    z-index: 1;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px;
-    margin: 0;
-    transition: 0.4s ease;
-}
-
-.d-imgs p {
-    font-size: 27px;
-    font-weight: bold;
-    position: absolute;
-    color: black;
-    z-index: 1;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px;
-    margin: 0;
-    transition: 0.4s ease;
-    background-color: #FFFFFF;
-} */
 
 .s-imgs p,
 .r-imgs p,
@@ -428,11 +395,11 @@ font-weight: lighter;
     position: relative;
     margin: 0 77px;
     gap: 20px;
-    padding-top: 30px;
+    padding-top: 60px;
 }
 
 .d-imgs {
-   background-color: antiquewhite;
+   background-color: #df9a1b75;
     height: 300px;
     width: 1fr;
     /* object-fit: cover; */
@@ -442,7 +409,7 @@ font-weight: lighter;
 
 .d-imgs img {
     width: 1fr;
-    height: 300px;
+    height: 290px;
     object-fit: cover;
 }
 
@@ -473,25 +440,6 @@ footer {
     background-color: black;
     height: 540px;
 }
-/* footer {
-    margin-top: 100px;
-    background-color: black;
-    width: 100%;
-    height: 300px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-  } */
-
-
-/* footer {
-    background-color: black;
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    position: relative;
-} */
 
 /* News */
 
@@ -521,7 +469,7 @@ footer {
 
 .footer-title p {
     color: #FFFFFF;
-    font-weight: bolder;
+    font-weight: 525;
     font-size: 48px;
     align-self: center;
 }
@@ -574,7 +522,88 @@ footer {
 }
 
 
+/* Info */
 
+.info {
+    display: grid;
+    grid-template-rows: 9fr 3fr 4fr;
+    color: white;
+    margin-top: 270px;
+    /* background-color: rgb(37, 40, 43); */
+    width: 90%;
+    cursor: pointer;
+}
+
+.footer-text {
+    display: grid;
+    grid-template-columns: 30% 20% 20% 30%;
+    color: #fff;
+    font-size: 21px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 200%;
+}
+
+.become img {
+    width: 210px;
+}
+
+.regular {
+    text-align: center;
+}
+
+.contact {
+    text-align: right;
+  }
+
+.call,
+.telf {
+    font-family: 'Playfair Display', serif;
+}
+
+.call {
+    font-size: 24px;
+    font-weight: 525;
+}
+
+.telf {
+    font-size: 34px;
+    font-weight: 550; 
+}
+
+.footer-bar {
+    background-color: #FFFFFF;
+    height: 1px;
+    align-self: center;
+}
+
+.copyright {
+    text-align: center;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px; 
+}
+
+
+
+/* footer {
+    margin-top: 100px;
+    background-color: black;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+  } */
+
+
+/* footer {
+    background-color: black;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    position: relative;
+} */
 
 
 /* .footer-bar {
@@ -640,18 +669,6 @@ footer {
     cursor: pointer;
 } */
 
-/* Info */
-
-.info {
-    display: grid;
-    grid-template-rows: 9fr 3fr 4fr;
-    color: white;
-    margin-top: 290px;
-    /* background-color: rgb(37, 40, 43); */
-    width: 90%;
-}
-
-
 /* .news {
     background-color: #26282B;
     width: 90%;
@@ -663,56 +680,6 @@ footer {
     padding: 3% 100px;
     gap: 30px;   
 } */
-
-
-.footer-text {
-    display: grid;
-    grid-template-columns: 30% 20% 20% 30%;
-    color: #fff;
-    font-size: 21px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    line-height: 200%;
-}
-
-.become img {
-    width: 210px;
-}
-
-.regular {
-    text-align: center;
-}
-.contact {
-    text-align: right;
-  
-}
-
-.call,
-.telf {
-    font-family: 'Playfair Display', serif;
-}
-
-.call {
-    font-size: 24px;
-    font-weight: 525;
-}
-
-.telf {
-    font-size: 34px;
-    font-weight: 625; 
-}
-
-.footer-bar {
-    background-color: #FFFFFF;
-    height: 1px;
-    align-self: center;
-}
-
-.copyright {
-    text-align: center;
-    font-weight: 500;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 14px; 
-}
 /* .info {
     display: grid;
     gap: 16x;
@@ -780,7 +747,6 @@ footer {
     main img {
         object-position: center;
     }
-
 
 
 }
