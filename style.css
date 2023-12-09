@@ -180,7 +180,18 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     background-color: rgb(45, 45, 45, 0.9);
 }
 
+.follow {
+    position: fixed;
+    display: flex;
+    z-index: 500;
+    left: 27px;
+    top: 30%;
 
+}
+
+.follow img {
+    width: 15px;
+}
 
 /* CONTENIDO GENERAL */
 
@@ -309,7 +320,7 @@ transition: 0.4s ease;
 
 .s-imgs img,
 .r-imgs img {
-    width: 1fr;
+    width: 100%;
     height: 400px;
     object-fit: cover;
 }
@@ -333,7 +344,6 @@ transition: 0.4s ease;
 
 .logo-superior img {
     height: 100px;
-    margin-bottom: 35%;
 }
 
 
@@ -383,7 +393,7 @@ font-weight: lighter;
 /* DEVELOPMENTS general */
 
 .develop-textos {
-   justify-content: center;
+    justify-content: center;
     text-align: center;
     margin-top: 100px;
 }
@@ -408,25 +418,26 @@ font-weight: lighter;
 }
 
 .d-imgs img {
-    width: 1fr;
+    width: 100%;
     height: 290px;
     object-fit: cover;
 }
 
 .d-imgs:hover {
-    border: solid 0.2px rgb(90, 90, 90);
-    animation: SlideTopAnimation 0.6s ease 0s 1 normal forwards;
+    border: solid 0.2px rgb(120, 120, 120);
+    transform: translateY(-20px);
+    /* animation: SlideTopAnimation 0.6s ease 0s 1 normal forwards; */
 }
 
-@keyframes SlideTopAnimation {
-	0%, 25% {
+/* @keyframes SlideTopAnimation {
+	0% {
 		transform: translateY(0);
 	}
 
 	100% {
 		transform: translateY(-20px);
 	}
-}
+} */
 
 
 
@@ -566,8 +577,8 @@ footer {
 }
 
 .telf {
-    font-size: 34px;
-    font-weight: 550; 
+    font-size: 32px;
+    font-weight: 500; 
 }
 
 .footer-bar {
@@ -584,149 +595,228 @@ footer {
 }
 
 
-
-/* footer {
-    margin-top: 100px;
-    background-color: black;
-    width: 100%;
-    height: 300px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-  } */
-
-
-/* footer {
-    background-color: black;
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    position: relative;
-} */
-
-
-/* .footer-bar {
-    width: 100%;
-    height: 0.5px;
-    background-color: white;
-}
-
-.copyright {
-    text-align: center;
-    margin-bottom: 15px;
-    margin-top: 15px;
-}  */
-
-/* .news {
-    background-color: #26282B;
-    width: 90%;
-    height: 200px;
-    position: absolute;
-    transform: translate(0,-50%); 
-} */
-
-/* .news {
-    background-color: #26282B;
-    display: flex;
-    justify-self: center;
-    gap: 16px;
-    padding: 16px 100px;
-    transform: translate(0,-50%);
-} */
-
-/* .news span {
-    color: #DF991B;
-    font-size: 20px;
-}
-
-.news p {
-    color: white;
-    font-size: 32px;
-}
-
-.footer-form {
-    display: grid;
-    gap: 8px;
-}
-
-.footer-form input {
-    background-color: transparent;
-    border: solid 2px grey;
-    border-radius: 30px;
-    padding: 6px 16px;
-    width: 100%;
-}
-
-.footer-form button {
-    background-color: transparent;
-    border: solid 2px #DF991B;
-    border-radius: 30px;
-    padding: 6px 32px;
-    width: fit-content;
-    color: #DF991B;
-    justify-self: end;
-    cursor: pointer;
-} */
-
-/* .news {
-    background-color: #26282B;
-    width: 90%;
-    height: 270px;
-    position: absolute;
-    transform: translate(0,-50%); 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 3% 100px;
-    gap: 30px;   
-} */
-/* .info {
-    display: grid;
-    gap: 16x;
-    color: white;
-}
-
-.footer-text {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 2fr;
-    font-size: 18px;
-    gap: 15px;
-    margin-bottom: 15px;
-    }
-
-.footer-text img {
-    width: 150px;
-}
-
-.contact{
-   font-family: 'Times New Roman', Times, serif;
-   text-align: right;
-}
-
-.telf {
-    font-size: 24px;
-    font-style: bold;
-}
-
-.footer-bar {
-    width: 100%;
-    height: 0.5px;
-    background-color: white;
-}
-
-.copyright {
-    text-align: center;
-    margin-bottom: 15px;
-    margin-top: 15px;
-} */
-
-
-
-
-
     /* RESPONSIVE */
 
-@media screen and (max-width: 600px) {
+    @media screen and (max-width: 1350px) {
+       
+        .interior-img img {
+        height: 800px;
+       }
+
+       .logo-superior {
+        margin-bottom: 10%;
+       }
+
+       .logo-superior img {
+        height: 80px;
+        overflow: hidden;
+        display: none;
+       }
+
+       .interior-btn {
+        margin-top: 20%;
+       }
+
+    }
+
+    @media screen and (max-width: 1200px) {
+        
+        .interior {
+            grid-template-columns: 1fr;
+            margin-top: 50px;
+           
+        }
+         
+        .interior-textos {
+            justify-content: center;
+            text-align: center;
+            margin: 0;
+            
+        }
+
+        .interior-btn {
+            margin: 0;
+            margin-top: 10%;
+        }
+    
+        .interior-img {
+            order: 2;
+        }
+
+        .interior-img img {
+            height: 1000px;
+        
+        }
+
+        .interior-textos div p {
+            display: none;
+        }
+
+        .logo-superior img {
+            display: none;
+        }
+
+        .news {
+            height: 320px;
+            width: 80%;
+            padding: 5%;
+            gap: 20px;
+        }
+
+        .info {
+            width: 80%;   
+        }
+    }
+    
+
+
+
+@media screen and (max-width: 1200px) {
+
+    .interior-img img {
+        height: 900px;
+       }
+
+    .become img {
+        width: 180px;
+    }
+
+    .become p,
+    .regular p, 
+    .mail {
+        font-size: 17px;
+    }
+     
+    .call {
+        font-size: 20px;
+    }
+
+    .telf {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #banner {
+       position: relative; 
+       display: grid;
+       grid-template-columns: 1fr;
+    }
+
+    .banner-input,
+    .banner-contenido {
+        display: grid;
+        grid-column: 1fr;
+        position: absolute;
+        align-items: center;
+        margin-top: 120px;
+        margin-left: 30%;
+        padding-top: 120px;
+    }
+
+    .banner-input input {
+        width: 400px;
+        align-items: center;
+    }
+
+    .banner-input img {
+        display: none;
+    }
+
+    .banner-boton {
+        width: 400px;
+    }
+
+    .banner-contenido h3 {
+        font-size: 120px;
+    }
+
+    .banner-contenido h3 span {
+        font-size: 60px;
+    }
+    
+    .follow {
+        display: none;
+    }
+
+    .footer-title p {
+        font-size: 42px;
+    }
+    
+    .info {
+        margin-top: 210px;
+    }
+
+    .footer-text {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact {
+        display: flex;
+        grid-column: 1/4;
+        justify-content: space-between;
+        margin-top: 50px;
+        /* margin-bottom: 50px; */
+        text-align: center;
+    }
+
+    .call {
+        order: 2;
+    }
+
+    .telf {
+        order: 1;
+    }
+
+    .mail {
+        order: 3;
+    }
+
+    .sale {
+        grid-template-columns: 1fr;
+    }
+    
+    .sale-textos {
+        order: 1;
+    }
+
+    .sale-imgs {
+        order: 2;
+        margin-top: 100px;
+    }
+
+    .rent {
+        grid-template-columns: 1fr; 
+    }
+
+    .rent-imgs {
+        margin-top: 100px;
+    }
+
+    .develop-imgs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .d-imgs {
+        height: 300px;
+        overflow-y: hidden;
+    }
+
+    .interior-img img {
+        height: 50%;
+       }
+
+    .banner-input {
+        justify-items: center;
+        width: 1fr;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 700px) {
 
     #logo {
         display: none;
@@ -748,8 +838,93 @@ footer {
         object-position: center;
     }
 
+   .news {
+    height: 400px;
+    grid-template-columns: 1fr;
+    padding: 10%;
+    gap: 0;
+   }
+   
+    .footer-text {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    .become img {
+        width: 120px;
+    }
+
+    /* .footer-text {
+        display: grid;
+        grid-template-columns: 30% 20% 20% 30%;
+        color: #fff;
+        font-size: 21px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 200%;
+    } */
 }
+
+@media screen and (max-width: 700px) {
+    /* .footer-title span {
+        font-size: 15px;
+    }
+
+    .footer-title p {
+        font-size: 27px;
+    } */
+
+    .footer-title {
+        margin-bottom: 30px;
+    }
+
+    .footer-text {
+        font-size: 10px ;
+    }
+
+    .info{
+        margin-top: 250px;
+    }
+    
+  
+
+    .call {
+        font-size: 12px;
+    }
+
+    .telf {
+        font-size: 12px;
+    }
+
+    .interior-img img {
+        height: 600px;
+       }
+}
+
+/* @media screen and (max-width: 900px) {
+    .footer-title span {
+        font-size: 20px;
+    }
+
+    .footer-title p {
+        font-size: 32px;
+    }
+
+    .footer-text {
+        font-size: 14px ;
+    }
+    
+    .become img {
+        width: 140px;
+    }
+
+    .call {
+        font-size: 16px;
+    }
+
+    .telf {
+        font-size: 20px;
+    }
+} */
+
    
 
    
