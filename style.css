@@ -927,7 +927,28 @@ footer {
 
    
 
+@media screen and (max-width: 575px) {
+
+    /* .interior-img img {
+        height: 400px;
+       } */
+
+    .develop-imgs {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-input {
+        display: none;
+    }
+
+    .banner-boton {
+        display: none;
+    }
+    
+    
+
+}
    
-   
+
 
 
