@@ -28,7 +28,7 @@ header nav {
 
 header nav a img {
     width: 210px;
-    margin-left: 67px;
+    margin-left: 30%;
 }
 
 #mobile {
@@ -73,24 +73,38 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 /* BANNER */
 
 #banner {
-    padding: 0 77px;
-    height: 100vh;
+    padding: 0 5%;
+    min-height: 100vh;
     width: 100%;
-    background-image: url(Imagenes\ proyecto\ landingpage/portada.png);
+    background: linear-gradient(to right, rgb(0 0 0 / 0.5), rgb(0 0 0 /0.5)), url(Imagenes\ proyecto\ landingpage/portada.png);
     background-size: cover;
     background-position: center;
+    background-blend-mode: darken;
+
+   
 }
+
+/* #banner background-image {
+    min-height: background;
+    filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.25));
+}  */
 
 #banner::before {
     content: "";
     position: absolute;
+    height: background-image ;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.25);
 }
 /* Para tener la imagen con opacidad */
+
+.banner-general {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+}
 
 /* Banner input */
 
@@ -426,18 +440,8 @@ font-weight: lighter;
 .d-imgs:hover {
     border: solid 0.2px rgb(120, 120, 120);
     transform: translateY(-20px);
-    /* animation: SlideTopAnimation 0.6s ease 0s 1 normal forwards; */
 }
 
-/* @keyframes SlideTopAnimation {
-	0% {
-		transform: translateY(0);
-	}
-
-	100% {
-		transform: translateY(-20px);
-	}
-} */
 
 
 
@@ -454,7 +458,7 @@ footer {
 
 /* News */
 
-.news {
+ .news {
     background-color: #26282B;
     width: 90%;
     height: 270px;
@@ -530,7 +534,7 @@ footer {
     cursor: pointer;
     color: #FFFFFF;
     background-color: #DF991B;
-}
+} 
 
 
 /* Info */
@@ -550,6 +554,7 @@ footer {
     grid-template-columns: 30% 20% 20% 30%;
     color: #fff;
     font-size: 21px;
+    font-weight: lighter;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 200%;
 }
@@ -573,7 +578,6 @@ footer {
 
 .call {
     font-size: 24px;
-    font-weight: 525;
 }
 
 .telf {
@@ -589,13 +593,77 @@ footer {
 
 .copyright {
     text-align: center;
-    font-weight: 500;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 14px; 
 }
 
 
     /* RESPONSIVE */
+
+
+@media screen and (max-width: 1400px) {
+
+        #logo {
+           margin-left: 24%;
+        }
+}
+
+@media screen and (max-width: 980px) {
+
+    #logo {
+       margin-left: 18%;
+    }
+
+    .login {
+        display: none;
+    }
+
+    .menu a, .menu div {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    #logo {
+       margin-left: 12%;
+    }
+
+    .banner-contenido {
+        margin-left: 0px;
+    }
+
+    .banner-contenido h3 span {
+        font-size: 26px;
+    }
+
+    .banner-contenido h3 {
+        font-size: 46px;
+    }
+
+    .follow {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+
+    #logo {
+        display: none;
+    }
+    
+    #mobile {
+        display: block;
+    }
+
+
+
+
+}
+
+
+
 
     @media screen and (max-width: 1350px) {
        
@@ -697,7 +765,7 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
-    #banner {
+    /* #banner {
        position: relative; 
        display: grid;
        grid-template-columns: 1fr;
@@ -725,19 +793,11 @@ footer {
 
     .banner-boton {
         width: 400px;
-    }
+    } */
 
-    .banner-contenido h3 {
-        font-size: 120px;
-    }
-
-    .banner-contenido h3 span {
-        font-size: 60px;
-    }
-    
-    .follow {
+    /* .follow {
         display: none;
-    }
+    } */
 
     .footer-title p {
         font-size: 42px;
@@ -818,21 +878,21 @@ footer {
 
 @media screen and (max-width: 700px) {
 
-    #logo {
+    /* #logo {
         display: none;
     }
 
     #mobile {
         display: block;
-    }
+    } */
 
-    .login {
+    /* .login {
         display: none;
     }
 
     .menu a, .menu div {
         display: none;
-    }
+    } */
 
     main img {
         object-position: center;
