@@ -47,7 +47,6 @@ header nav a img {
     }
     
 .login, .menu {
-    display: flex;
     gap: 16px;
     align-items: center;
     display: none;
@@ -73,10 +72,6 @@ header nav a img {
     
     
  /* BANNER */
-    
-.banner {
-position: relative;
-}
 
 .portada,
 .portada-mobile {
@@ -94,18 +89,14 @@ position: relative;
     position: absolute;
     top: 100px;
     margin: 5%;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%); */
 }
 
-    /* Banner input */
+/* Banner input */
 
-    .banner-input {
+.banner-input {
     position: relative;   
     width: fit-content;
-    float: right;
-   
+    float: right; 
 }
 
 .banner-input input {
@@ -133,20 +124,9 @@ position: relative;
 
 /* Banner contenido */
 
-/* .banner-contenido {
-    position: relative;
-    color: #fff;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 360px;
-} */
-
 .banner-contenido {
 display: grid;
-margin-top: 15rem;
-
+margin-top: 13.5rem;
 }
 
 .banner-contenido h3 {
@@ -197,14 +177,13 @@ margin-top: 15rem;
     position: fixed;
     display: flex;
     z-index: 500;
-    left: 27px;
+    left: 20px;
     top: 30%;
     display: none;
-
 }
 
 .follow img {
-    width: 15px;
+    width: 12px;
 }
 
 
@@ -236,7 +215,6 @@ h2 {
     gap: 30px;
     margin-top: 10%;
     justify-content: center;
-    align-content: center;
     transition: 0.4s ease;
     }
     
@@ -290,11 +268,21 @@ h2 {
 
 /* SALE RENT INTERIOR general */
 
-.sale, 
+/* .sale, 
 .rent,
 .interior, {
     display: grid;
     place-items: center;
+} */
+
+.sale, 
+.rent,
+.interior {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    place-items: center;
+    margin-top: 100px;
 }
 
 /* SALE RENT INTERIOR textos */
@@ -668,7 +656,7 @@ footer {
 }
 
 .become img {
-    width: 270px;
+    width: 240px;
 }
 
 /* .regular {
@@ -713,7 +701,7 @@ footer {
 
 /* RESPONSIVE */
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 460px) {
 
 
     /* Botones generales */
@@ -722,7 +710,7 @@ footer {
         justify-content: space-between;
     }
     .btn-sec {
-        display: block;
+        display: flex;
     }
 
 
@@ -804,17 +792,91 @@ footer {
 }
 
 
-@media screen and (min-width: 700px) {
 
-        /* DEVELOPMENTS */
+@media screen and (min-width: 600px) {
+    
+    /* FOOTER */
 
-        .develop-imgs {
-            grid-template-columns: repeat(3, 1fr);
-        }
+    .footer-text {
+        grid-template-columns: 50% 25% 25%;
+        grid-template-areas: 
+        "become reg1 reg2"
+        "contact contact contact";
+    }
+
+    .contact {
+       display: flex;
+       justify-content: space-between;
+   
+
+    }
+
+    .become{
+        text-align: left;
+    }
+
+    .become img {
+        width: 200px;
+    }   
 
 }
 
+@media screen and (max-width: 700px) {
+    .sale, 
+    .rent,
+    .interior {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 700px) {
+
+
+    /* CONTENIDO ESPECIFICO */
+
+    /* SALE RENT INTERIOR general */
+
+    .sale-imgs {
+        order: 1;
+    }
+
+    .sale-textos {
+        order: 2;
+        /* padding:0 5% 0 5%; */
+    }
+
+    .s-imgs,
+    .r-imgs {
+        grid-column: span 6;
+    }
+
+    .inactive {
+        display: none;
+    }
+    
+
+
+   /* DEVELOPMENTS */
+
+   .develop-imgs {
+    grid-template-columns: repeat(3, 1fr);
+}
+}
+    
+
+
+
 @media screen and (min-width: 1000px) {
+   
+    /* HEADER */
+
+    .nav-links {
+        margin-right: 3.75%;
+    }
+
+    .login, .menu {
+        display: flex;
+    }
 
     /* BANNER */
 
@@ -824,6 +886,49 @@ footer {
 
     .portada {
         display: block;
+    }
+
+    .banner-contenido {
+        display: grid;
+        margin-top: 12rem;
+        }
+
+    .banner-contenido h3 {
+        font-size: 54px;
+    }
+
+    .banner-contenido h3 span {
+        font-size: 33px;
+    }
+
+    .follow {
+        display: block;
+    }
+
+    /* CONTENIDO GENERAL */
+
+    /* Textos generales */
+
+    .world {
+        font-size: 27px;
+    }
+
+    h2 {
+       font-size: 54px;
+    }
+
+    /* CONTENIDO ESPECIFICO */
+
+    /* SALE RENT INTERIOR general */
+
+    .s-imgs,
+    .r-imgs {
+        grid-column: span 5;
+    }
+
+    .inactive {
+        display: block;
+        grid-column: span 2;
     }
 
     /* DEVELOPMENTS */
