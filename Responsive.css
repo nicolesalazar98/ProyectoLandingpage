@@ -268,22 +268,13 @@ h2 {
 
 /* SALE RENT INTERIOR general */
 
-/* .sale, 
+.sale, 
 .rent,
 .interior, {
     display: grid;
     place-items: center;
-} */
-
-.sale, 
-.rent,
-.interior {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    place-items: center;
-    margin-top: 100px;
 }
+
 
 /* SALE RENT INTERIOR textos */
 
@@ -376,6 +367,12 @@ h2 {
     grid-column: span 5;
 } 
 
+.inactive {
+    display: none;
+}
+
+
+/* INTERIOR imagenes */
 
 
 .interior-img {
@@ -395,9 +392,7 @@ h2 {
     object-fit: cover;
 }
 
-.inactive {
-    display: none;
-}
+
 
 
 
@@ -488,18 +483,16 @@ h2 {
 
 /* FOOTER */
 
-
-
-
 footer {
     display: grid;
     justify-items: center;
     position: relative;
-    margin-top: 200px;
+    margin-top: 150px;
     background-color: black;
     /* height: 600px; */
     position: relative;
 }
+
 
 /* News */
 
@@ -557,7 +550,7 @@ footer {
     border: solid 1px #7E7E7E;
     border-radius: 100px;
     padding: 10px 10px;
-    /* align-self: center; */
+    align-self: center;
     justify-self: center;
     color: #fff;
     width: 80%;
@@ -596,6 +589,8 @@ footer {
     /* position: absolute; */
     justify-content: center;
 }
+
+
 
 .footer-text {
     display: grid;
@@ -716,15 +711,11 @@ footer {
 
     /* SALE RENT */
 
-    .s3,
-    .r1 {
+    .s-imgs,
+    .r-imgs {
         grid-column: span 6;
     }
 
-    .s2,
-    .r2 {
-        grid-column: span 6;
-    } 
 
     /* FOOTER */
 
@@ -773,6 +764,10 @@ footer {
 
     /* DEVELOPMENTS */
 
+    .btn-develop {
+        display: none;
+    }
+
     .develop-imgs {
         grid-template-columns: repeat(2, 1fr);
         margin: 0 5%;
@@ -797,8 +792,26 @@ footer {
     
     /* FOOTER */
 
+    /* News */
+
+    .news {
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+        margin: 3%;  
+    }
+
+    .footer-title span {
+        font-size: 24px;
+    }
+    
+    .footer-title p {
+        font-size: 36px;
+    }
+
+ 
+
     .footer-text {
-        grid-template-columns: 50% 25% 25%;
+        grid-template-columns: 46% 27% 27%;
         grid-template-areas: 
         "become reg1 reg2"
         "contact contact contact";
@@ -821,21 +834,23 @@ footer {
 
 }
 
-@media screen and (max-width: 700px) {
-    .sale, 
-    .rent,
-    .interior {
-        grid-template-columns: 1fr;
-    }
-}
 
 @media screen and (min-width: 700px) {
 
 
     /* CONTENIDO ESPECIFICO */
-
-    /* SALE RENT INTERIOR general */
-
+    
+    .sale, 
+    .rent,
+    .interior {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        place-items: center;
+        margin-top: auto;
+    }     
+    
+    
     .sale-imgs {
         order: 1;
     }
@@ -845,10 +860,16 @@ footer {
         /* padding:0 5% 0 5%; */
     }
 
-    .s-imgs,
-    .r-imgs {
-        grid-column: span 6;
+    .s3,
+    .r1 {
+        grid-column: span 9;
     }
+    
+    .s2,
+    .r2 {
+        grid-column: span 3;
+    } 
+    
 
     .inactive {
         display: none;
@@ -861,9 +882,53 @@ footer {
    .develop-imgs {
     grid-template-columns: repeat(3, 1fr);
 }
+
+   
+
+
+    /* INTERIOR */
+
+    .interior-img {
+        order: 1;
+    }
+
+    .interior-textos {
+        order: 2;
+    }
+
+    .interior-img img {
+       
+       width: 300px;
+    }
+
 }
     
+@media screen and (min-width: 780px) {
 
+    /* CONTENIDO ESPECIFICO */
+
+    .s-imgs,
+    .r-imgs {
+        grid-column: span 6;
+    }
+    
+    /* FOOTER */
+
+    
+    .footer-text {
+    
+        grid-template-columns: 30% 20% 20% 30%;  
+        grid-template-areas: 
+        "become reg1 reg2 contact";
+    }
+    
+    .contact {
+        display: grid;
+        grid-template-columns: 1;
+        text-align: right;
+    }
+
+}
 
 
 @media screen and (min-width: 1000px) {
@@ -905,17 +970,7 @@ footer {
         display: block;
     }
 
-    /* CONTENIDO GENERAL */
 
-    /* Textos generales */
-
-    .world {
-        font-size: 27px;
-    }
-
-    h2 {
-       font-size: 54px;
-    }
 
     /* CONTENIDO ESPECIFICO */
 
@@ -941,7 +996,67 @@ footer {
         display: block;
     }
 
+
+    /* FOOTER */
+
+    .footer-title span {
+        font-size: 27px;
+    }
+    
+    .footer-title p {
+        font-size: 48px;
+    }
+
+    .footer-text {
+        font-size: 21px ;
+    }
+
+    .call {
+        font-size: 24px;
+    }
+    
+    .telf {
+        font-size: 32px;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+
+
 }
+
+
+
+@media screen and (min-width: 1200px) {
+
+    /* BANNER */
+
+    .follow {
+        left: 20px;
+    }
+    
+    .follow img {
+        width: 15px;
+    }
+
+    /* CONTENIDO GENERAL */
+
+    /* Textos generales */
+
+    .world {
+        font-size: 27px;
+    }
+
+    h2 {
+       font-size: 54px;
+    }
+
+
+
+
+}
+
     
 
 
