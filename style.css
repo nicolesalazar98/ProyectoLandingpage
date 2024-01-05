@@ -104,6 +104,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 .banner-general {
     display: grid;
     grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 35% 30% 35%;
 }
 
 /* Banner input */
